@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leãonardo Chatbot</title>
+  <style>
+    :root {
+      --bg-color: #313338;
+      --chat-bg: #2b2d31;
+      --user-color: #5865f2;
+      --bot-color: #383a40;
+      --text-color: #f2f3f5;
+      --input-bg: #1e1f22;
+      --border-color: #1f2023;
+      --accent: #5865f2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg-color);
+      font-family: "Inter", "Segoe UI", sans-serif;
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .chat-wrapper {
+      width: 100%;
+      max-width: 800px;
+      height: 90vh;
+      background: var(--chat-bg);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #202225;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+    }
+
+    .messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .message {
+      padding: 10px 14px;
+      border-radius: 8px;
+      max-width: 70%;
+      font-size: 15px;
+      line-height: 1.4;
+      animation: fadeIn 0.25s ease;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .user {
+      background: var(--user-color);
+      color: white;
+      align-self: flex-end;
+    }
+
+    .bot {
+      background: var(--bot-color);
+      align-self: flex-start;
+      color: var(--text-color);
+    }
+
+    .typing {
+      opacity: 0.7;
+      font-style: italic;
+    }
+
+    form {
+      display: flex;
+      padding: 16px;
+      background: var(--input-bg);
+      border-top: 1px solid var(--border-color);
+    }
+
+    input {
+      flex: 1;
+      background: #383a40;
+      color: var(--text-color);
+      border: none;
+      outline: none;
+      font-size: 15px;
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-right: 10px;
+    }
+
+    input:focus {
+      background: #3e4046;
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #4752c4;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .messages::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .messages::-webkit-scrollbar-thumb {
+      background: #202225;
+      border-radius: 4px;
+    }
+
+    .messages::-webkit-scrollbar-thumb:hover {
+      background: #2f3136;
+    }
+
+    @media (max-width: 600px) {
+      .chat-wrapper {
+        height: 100vh;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-wrapper">
+    <div class="messages" id="messages"></div>
+    <form id="chat-form">
+      <input id="user-input" type="text" placeholder="Pergunte a Leãonardo" required />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("chat-form");
+    const input = document.getElementById("user-input");
+    const messages = document.getElementById("messages");
+
+    const N8N_WEBHOOK_URL = "https://leaonardo.app.n8n.cloud/webhook-test/bot"; // <-- Substitua aqui
+
+    function addMessage(text, sender) {
+      const div = document.createElement("div");
+      div.classList.add("message", sender);
+      div.textContent = text;
+      messages.appendChild(div);
+      messages.scrollTop = messages.scrollHeight;
+      return div;
+    }
+
+    function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    async function typeMessage(element, text, delay = 20) {
+      element.textContent = "";
+      for (let i = 0; i < text.length; i++) {
+        element.textContent += text[i];
+        messages.scrollTop = messages.scrollHeight;
+        await sleep(delay);
+      }
+    }
+
+    // Add initial bot message
+    window.addEventListener("DOMContentLoaded", () => {
+      addMessage("Olá, sou o Leãonardo, seu consultor da PL 1087/2025, como posso ajudar?", "bot");
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const userMessage = input.value.trim();
+      if (!userMessage) return;
+
+      addMessage(userMessage, "user");
+      input.value = "";
+
+      // Placeholder "digitando..."
+      const botPlaceholder = addMessage("...", "bot");
+      botPlaceholder.classList.add("typing");
+
+      try {
+        const response = await fetch(N8N_WEBHOOK_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: userMessage }),
+        });
+
+        if (!response.ok) throw new Error("Erro ao conectar ao n8n");
+        const data = await response.json();
+
+        const reply = data.reply || "Desculpe, não recebi uma resposta do servidor.";
+        botPlaceholder.classList.remove("typing");
+        await typeMessage(botPlaceholder, reply, 25);
+      } catch (err) {
+        console.error(err);
+        botPlaceholder.classList.remove("typing");
+        botPlaceholder.textContent = "⚠️ Erro ao conectar ao servidor n8n.";
+      }
+    });
+  </script>
+</body>
+</html>
