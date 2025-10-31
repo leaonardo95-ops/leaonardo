@@ -1,0 +1,85 @@
+Nesse arquivo, serão colocadas perguntas e, abaixo, suas respectivas respostas
+
+P - Dividendos e lucros distribuídos passam a ser tributados?
+R - Sim. Lucros e dividendos pagos por empresas acima de R$ 50 mil mensais por pessoa física terão retenção de 10% na fonte. Além disso, dividendos remetidos ao exterior também pagarão 10% de IR, conforme o novo §4º do art. 10 da Lei nº 9.249/1995.
+
+P - Quem vai se beneficiar da nova faixa de isenção?
+R - Serão beneficiadas todas as pessoas físicas com rendimentos tributáveis de até R$ 5.000 por mês. Esses contribuintes terão isenção total do IRPF, ou seja, não pagarão imposto sobre sua renda mensal. A medida alcança principalmente trabalhadores assalariados e autônomos de classe média-baixa, ampliando a isenção que hoje é de cerca de R$ 3.036
+
+P - Como funciona o desconto parcial para quem ganha entre R$ 5 mil e R$ 7 mil?
+R - Quem recebe entre R$ 5.000,01 e R$ 7.000,00 por mês terá direito a uma redução gradual do imposto, calculada pela fórmula:  1.095,11 – (0,156445 × renda tributável). Esse desconto diminui linearmente até zerar para rendimentos acima de R$ 7 mil. Assim, quem ganha próximo a R$ 6 mil paga menos imposto, e quem ultrapassa R$ 7 mil volta à tributação normal.
+
+P - Quando essas mudanças começam a valer?
+R - As novas regras entram em vigor em janeiro de 2026, com impacto na declaração de 2027 (ano-calendário 2026).
+
+P - Como ficam os descontos e deduções na declaração anual depois da reforma?
+R - As deduções continuam existindo, mas haverá também uma redução adicional no imposto anual, seguindo outra fórmula: 9.429,52 – (0,1122562 × renda anual tributável), válida até R$ 84 mil por ano (ou R$ 7 mil/mês). Isso complementa o desconto mensal e garante isenção total até R$ 60 mil/ano.
+
+P - Essa nova fórmula de redução substitui a tabela progressiva ou funciona junto com ela?
+R - Funciona junto com a tabela progressiva. A tabela normal do IRPF continua sendo aplicada, e o desconto atua “por fora”, reduzindo o imposto devido. O limite é que o desconto não pode gerar imposto negativo — ou seja, não há restituição além do imposto devido.
+
+P - Quem terá que pagar o imposto mínimo?
+R - Contribuintes cuja soma de rendas (salário, lucros, dividendos, aplicações, etc.) ultrapasse R$ 600 mil por ano — o equivalente a R$ 50 mil por mês. A alíquota cresce progressivamente até 10% para rendas acima de R$ 1,2 milhão/ano.
+
+P - Como o governo pretende evitar bitributação entre empresa e pessoa física?
+R - O projeto cria um “redutor” do IRPFM, previsto no art. 16-B, que reduz o imposto do investidor quando a empresa já paga uma carga alta. Esse redutor ajusta a soma das alíquotas efetivas da empresa e da pessoa física para não ultrapassar 34% (geral), 40% (instituições financeiras) ou 45% (bancos).
+
+P - O projeto aumenta ou reduz a arrecadação total?
+R - Segundo o Ministério da Fazenda, o projeto foi desenhado para ser fiscalmente neutro — ou seja, a perda com a isenção (≈ R$ 25,8 bi) seria compensada pela tributação das altas rendas e dos dividendos (≈ R$ 34 bi).
+
+P - O governo garante que a reforma é fiscalmente neutra?
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
+
+P - 
+R - 
