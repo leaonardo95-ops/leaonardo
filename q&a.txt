@@ -6,8 +6,8 @@ R - Sim. Lucros e dividendos pagos por empresas acima de R$ 50 mil mensais por p
 P - Quem vai se beneficiar da nova faixa de isenção?
 R - Serão beneficiadas todas as pessoas físicas com rendimentos tributáveis de até R$ 5.000 por mês. Esses contribuintes terão isenção total do IRPF, ou seja, não pagarão imposto sobre sua renda mensal. A medida alcança principalmente trabalhadores assalariados e autônomos de classe média-baixa, ampliando a isenção que hoje é de cerca de R$ 3.036
 
-P - Como funciona o desconto parcial para quem ganha entre R$ 5 mil e R$ 7 mil?
-R - Quem recebe entre R$ 5.000,01 e R$ 7.000,00 por mês terá direito a uma redução gradual do imposto, calculada pela fórmula:  1.095,11 – (0,156445 × renda tributável). Esse desconto diminui linearmente até zerar para rendimentos acima de R$ 7 mil. Assim, quem ganha próximo a R$ 6 mil paga menos imposto, e quem ultrapassa R$ 7 mil volta à tributação normal.
+P - Como funciona o desconto parcial para quem ganha entre R$ 5 mil e R$ 7,5 mil?
+R - Quem recebe entre R$ 5.000,01 e R$ 7.500,00 por mês terá direito a uma redução gradual do imposto, calculada pela fórmula:  1.095,11 – (0,156445 × renda tributável). Esse desconto diminui linearmente até zerar para rendimentos acima de R$ 7 mil. Assim, quem ganha próximo a R$ 6 mil paga menos imposto, e quem ultrapassa R$ 7 mil volta à tributação normal.
 
 P - Quando essas mudanças começam a valer?
 R - As novas regras entram em vigor em janeiro de 2026, com impacto na declaração de 2027 (ano-calendário 2026).
